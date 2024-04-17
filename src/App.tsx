@@ -1,13 +1,11 @@
 
 import { PageHeader } from "./layout/PageHeader"
-import SearchBar from "./layout/SearchBar"
 
 const App = () => {
-  return <div className="bg-slate-900 h-screen text-white font-sans">
-<PageHeader />
-<SearchBar/>
-    </div>
-  
+  return <div className="bg-gray-950 h-screen text-white font-sans">
+    <PageHeader />
+  </div>
+
 }
 
 export default App

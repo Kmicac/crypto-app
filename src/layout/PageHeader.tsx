@@ -2,6 +2,7 @@ import { useState } from 'react'
 import logo from '../assets/MoralisMoneyLogomark.5b65b0d7.svg'
 import logo1 from '../assets/MoralisMoneyLogotype.431faf8b.svg'
 import { FaChartBar, FaChevronDown, FaSearch, FaBookmark, FaGraduationCap, FaBriefcase, FaCode, FaCog, FaChevronLeft } from 'react-icons/fa';
+import SearchBar from './SearchBar';
 
 export function PageHeader() {
   const [open, setOpen] = useState(true);
@@ -11,8 +12,8 @@ export function PageHeader() {
   }
 
   return (
-    <div className='absolute'>
-      <div className={`flex flex-col ${open ? "w-64" : "w-20"} h-screen bg-sky-950 bg-opacity-50 transition-all duration-300 pt-1`}>
+    <div className='flex'>
+      <div className={`flex flex-col ${open ? "w-64" : "w-18"} h-screen bg-sky-950 bg-opacity-50 transition-all duration-300 pt-1`}>
         <div className='px-6 pt-6 mb-6'>
           <a className='flex gap-3' href="/">
             <img src={logo} className={`h-8 ${!open ? 'absolute pt-0' : 'flex'}`} />
@@ -52,11 +53,14 @@ export function PageHeader() {
             <span className={`${!open && 'hidden'}`}>API For Devs</span>
           </li>
         </ul>
-        <div className="mt-auto px-8 py-4 flex justify-center">
-          <button onClick={handleToggleSidebar} className="text-white">
+        <div className="mt-auto px-8 py-4 flex justify-center border-y border-slate-700">
+          <button onClick={handleToggleSidebar}>
             <FaChevronLeft className={`${open ? '' : 'rotate-180'} transition-transform duration-300`} />
           </button>
         </div>
+      </div>
+      <div className='flex-1'>
+        <SearchBar />
       </div>
     </div>
   )
