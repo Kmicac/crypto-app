@@ -36,16 +36,13 @@ export function PageHeader() {
             </button>
             {showSubsections && (
           <>
-            {/* Agrega tus dos secciones adicionales aquí */}
             <a className='flex justify-between text-[#f0f8ff]  w-full h-16 px-4 rounded-lg hover:bg-[#0d2035] hover:shadow-md' >
               <li className="flex items-center gap-4 pt-6">
-                {/* Icono de la sección 1 */}
                 <span className={`${!open && 'hidden'}`}>Top token by market cap</span>
               </li>
             </a>
             <a className='flex justify-between text-[#f0f8ff]  w-full h-16 px-4 rounded-lg hover:bg-[#0d2035] hover:shadow-md' >
               <li className="flex items-center gap-4 pt-6">
-                {/* Icono de la sección 2 */}
                 <span className={`${!open && 'hidden'}`}>Top token on the move</span>
               </li>
             </a>
