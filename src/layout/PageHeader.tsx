@@ -18,7 +18,7 @@ export function PageHeader() {
   }
   return (
     <div className='flex'>
-      <div className={`flex flex-col ${open ? "w-64" : "w-18 gap-6"} h-screen bg-sky-950 bg-opacity-50 transition-all duration-300 pt-1`}>
+      <div className={`flex flex-col ${open ? "w-64" : "w-18 gap-6"} h-screen bg-sky-950 bg-opacity-50 transition-all duration-300 pt-1 `}>
         <div className='px-6 pt-6 mb-6'>
           <a className='flex gap-3' href="/">
             <img src={logo} className={`h-8 ${!open ? 'absolute pt-0' : 'flex'}`} />
